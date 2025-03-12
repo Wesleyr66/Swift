@@ -1,67 +1,36 @@
 //
 //  main.swift
-//  Aula1
+//  Aula02
 //
-//  Created by Aluno Mack on 11/03/25.
+//  Created by Mack Aluno on 12/03/25.
 //
 
 import Foundation
 
-// CHALLENGE 1
 
-//print("Hello, World!")
-//
-//for i in 0...7{
-//    if(i%2==0){
-//        print(i,"O número é par")
-//    }else{
-//        print(i,"O número não é par")
+//func divisao (num1:Int, num2:Int) -> Bool {
+//    return num1%num2==0
+//}
+//print(divisao(num1: 5, num2:5))
+
+//func fusao (array:[Int], num:Int) -> Bool {
+//    for i in 0...array.capacity{
+//        if(array[i]==num){
+//            return true
+//        }else if(array[i]==array.capacity){
+//            return false
+//        }
 //    }
+//    return false
 //}
+//print(fusao(array: [8,2,3,4,5], num:2))
 
-
-// CHALLENGE 2
-
-//var number = 10;
-//var factorial = 1
-//for i in 1...number{
-//    factorial *= i;
-//}
-//
-//print (factorial)
-//if(factorial % 2 == 0){
-//    print("Factorial é par")
-//}else{
-//    print("Factorial é ímpar")
-//}
-
-
-// CHALLENGE 3
-
-var number = 1
-for tabuada in 1...10{
-
-    var resultado = tabuada * number;
-
-    for i in 1...resultado{
-        
-        if(resultado == 1){
-            print(resultado,"Número é primo")
-        }
-        
-        if(i>1){
-            if(resultado%i==0){
-                if(i==resultado){
-                    print(resultado,"Número é primo")
-                }
-                else{
-                    print(resultado,"Número não é primo")
-                    break
-                }
-            }
-        }
-        
+func ultimo (num:Int) -> Int {
+    if(num==0){
+        return 1
+    }else{
+        return num * ultimo(num: num - 1)
     }
-    
-    }
+}
+print(ultimo(num: 3))
 
