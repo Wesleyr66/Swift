@@ -1,0 +1,68 @@
+//
+//  main.swift
+//  Aula003
+//
+//  Created by Aluno Mack on 14/03/25.
+//
+
+import Foundation
+
+//class Quadradado {
+//    var Lado : Double
+//
+//    init(Lado: Double) {
+//        self.Lado = Lado
+//    }
+//
+//    func Area () -> Double {
+//        return Lado * Lado
+//    }
+//}
+//
+//let quadrado1 = Quadradado(Lado: 2.5)
+//
+//print(quadrado1.Area())
+
+
+//class Circulo {
+//    var Raio : Double
+//
+//    init(Raio: Double) {
+//        self.Raio = Raio
+//    }
+//
+//    func perimetro () -> Double{
+//        return 2*3.14*Raio
+//    }
+//
+//    func area () -> Double{
+//        return 3.14*(Raio*Raio)
+//    }
+//}
+//
+//let circulo1 = Circulo(Raio: 4)
+//
+//print(circulo1.area(),circulo1.perimetro())
+
+class Triangulo {
+    var Altura : Double
+    var Base : Double
+    
+    init(Altura: Double, Base: Double) {
+        self.Altura = Altura
+        self.Base = Base
+    }
+    
+    func Volume() -> Double{
+        return (((Base*Altura)/2)*Altura)/3
+    }
+    
+    func Area() -> Double{
+        _ = pow(Base, 2)
+        _ = sqrt(pow(Altura, 2) + pow(Base/2,2))
+        return (Base*Base)
+    }
+}
+let Triangulo1 = Triangulo(Altura: 10, Base: 5)
+
+print(Triangulo1.Area(),Triangulo1.Volume())
